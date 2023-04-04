@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Azure AD B2C test app</title>
+  </head>
+  <body>
+    <h2>My Azure AD B2C test app</h2>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <button
+      type="button"
+      id="signIn"
+      class="btn btn-secondary"
+      onclick="signIn()"
+    >
+      Sign-in
+    </button>
+    <button
+      type="button"
+      id="signOut"
+      class="btn btn-success d-none"
+      onclick="signOut()"
+    >
+      Sign-out
+    </button>
+    <h5 id="welcome-div" class="card-header text-center d-none"></h5>
+    <br />
+    <!-- Content -->
+    
+    <script
+      src="https://alcdn.msauth.net/browser/2.14.2/js/msal-browser.min.js"
+      integrity="sha384-ggh+EF1aSqm+Y4yvv2n17KpurNcZTeYtUZUvhPziElsstmIEubyEB6AIVpKLuZgr"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Importing app scripts (load order is important) -->
+    <script type="text/javascript" src="./policies.js"></script>
+    <script type="text/javascript" src="./authConfig.js"></script>
+    <script type="text/javascript" src="./ui.js"></script>
+
+    <!-- <script type="text/javascript" src="./authRedirect.js"></script>   -->
+    <!-- uncomment the above line and comment the line below if you would like to use the redirect flow -->
+    <script type="text/javascript" src="./authRedirect.js"></script>
+    <script type="text/javascript" src="./api.js"></script>
+  </body>
+</html>
